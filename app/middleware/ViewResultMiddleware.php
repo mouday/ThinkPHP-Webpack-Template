@@ -5,7 +5,13 @@ namespace app\middleware;
 
 use \Think\response\View as ViewResponse;
 
-class CustomerMiddleware
+/**
+ * 视图响应添加公共参数
+ *
+ * Class ViewResultMiddleware
+ * @package app\middleware
+ */
+class ViewResultMiddleware
 {
     /**
      * 为视图响应添加公共参数
@@ -31,6 +37,5 @@ class CustomerMiddleware
         }
 
         return $response;
-
     }
 }

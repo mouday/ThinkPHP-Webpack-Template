@@ -5,6 +5,10 @@
 dev:
 	php think run
 
+# 清除缓存
+clear:
+	php think clear -r
+
 # 部署
 dep-pro:
 	bash deploy.sh

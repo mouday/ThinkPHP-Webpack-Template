@@ -14,6 +14,15 @@ namespace think;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+// 处理 OPTIONS 请求
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    header("'Access-Control-Allow-Credentials: true");
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-CSRF-TOKEN, X-Requested-With, X-Token");
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, PATCH');
+    exit;
+}
+
 // 执行HTTP应用并响应
 $http = (new App())->http;
 

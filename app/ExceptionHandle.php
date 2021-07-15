@@ -53,6 +53,14 @@ class ExceptionHandle extends Handle
         // 添加自定义异常处理机制
 
         // 其他错误交给系统处理
-        return parent::render($request, $e);
+        // return parent::render($request, $e);
+
+        if (str_starts_with($request->root(), '/api') || $request->isJson()) {
+            $result = JsonResult::error(null, $e->getMessage());
+            return json($result);
+        } else {
+            // 其他错误交给系统处理
+            return parent::render($request, $e);
+        }
     }
 }
