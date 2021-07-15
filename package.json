@@ -1,0 +1,43 @@
+{
+  "name": "web-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "copy": "cp -r dist public/static",
+    "pub": "npm run build && npm run copy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "@vue/babel-preset-jsx": "^1.2.4",
+    "@vue/compiler-sfc": "^3.1.4",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.6",
+    "less-loader": "^10.0.1",
+    "mini-css-extract-plugin": "^2.1.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "postcss-loader": "^6.1.1",
+    "style-resources-loader": "^1.4.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue": "^2.6.14",
+    "vue-loader": "^15.9.7",
+    "vue-style-loader": "^4.1.3",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {}
+}
