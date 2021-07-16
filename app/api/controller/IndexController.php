@@ -3,6 +3,7 @@
 namespace app\api\controller;
 
 use app\BaseController;
+use app\model\UserModel;
 
 class IndexController extends BaseController
 {
@@ -11,4 +12,5 @@ class IndexController extends BaseController
     {
         return ['name' => 'Tom', 'age' => 23];
     }
+
 }
